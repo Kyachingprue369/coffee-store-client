@@ -44,39 +44,39 @@ const AddCoffee = () => {
         <p className='text-center text-gray-500 pb-10'>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at <br /> its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed <br /> to using Content here.</p>
       </div>
       <form onSubmit={handleAddCoffee}>
-        <div className='flex items-center w-1/2 gap-5 mx-auto pb-5 justify-center'>
+        <div className='md:flex items-center w-1/2 gap-5 mx-auto pb-5 justify-center'>
           <div className='w-full'>
             <label className="fieldset-label pb-2 text-black">Name</label>
-            <input type="text" className="input" name='name' placeholder="Enter Coffee name" />
+            <input type="text" className="input" name='name' placeholder="Enter Coffee name" required />
           </div>
           <div className='w-full'>
             <label className="fieldset-label pb-2 text-black">Chef</label>
-            <input type="text" className="input" name='chef' placeholder="Enter Coffee chef" />
+            <input type="text" className="input" name='chef' placeholder="Enter Coffee chef" required />
           </div>
         </div>
-        <div className='flex items-center w-1/2 gap-5 mx-auto pb-5 justify-center'>
+        <div className='md:flex items-center w-1/2 gap-5 mx-auto pb-5 justify-center'>
           <div className='w-full'>
             <label className="fieldset-label pb-2 text-black">Supplier</label>
-            <input type="text" className="input" name='supplier' placeholder="Enter Coffee supplier" />
+            <input type="text" className="input" name='supplier' placeholder="Enter Coffee supplier" required />
           </div>
           <div className='w-full'>
             <label className="fieldset-label pb-2 text-black">Taste</label>
-            <input type="text" className="input" name='taste' placeholder="Enter coffee taste" />
+            <input type="text" className="input" name='taste' placeholder="Enter coffee taste" required />
           </div>
         </div>
-        <div className='flex items-center w-1/2 gap-5 mx-auto pb-5 justify-center'>
+        <div className='md:flex items-center w-1/2 gap-5 mx-auto pb-5 justify-center'>
           <div className='w-full'>
             <label className="fieldset-label pb-2 text-black">Category</label>
-            <input type="text" className="input" name='category' placeholder="Enter Coffee category" />
+            <input type="text" className="input" name='category' placeholder="Enter Coffee category" required />
           </div>
           <div className='w-full'>
             <label className="fieldset-label pb-2 text-black">Details</label>
-            <input type="text" className="input" name='details' placeholder="Enter Coffee details" />
+            <input type="text" className="input" name='details' placeholder="Enter Coffee details" required />
           </div>
         </div>
         <div className='w-6/12 mx-auto pb-5'>
           <label className="fieldset-label text-black">Photo</label>
-          <input type="text" className="input w-full" name='photo' placeholder="Enter photo URL" />
+          <input type="text" className="input w-full" name='photo' placeholder="Enter photo URL" required />
         </div>
         <div className='w-6/12 mx-auto pb-10'>
           <input type="submit" className='btn w-full bg-[#D2B48C] border-2 border-black' value="Add Coffee" />
