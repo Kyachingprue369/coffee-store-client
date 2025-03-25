@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Login = () => {
   const { loginUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleLoginUser = event => {
     event.preventDefault();
@@ -16,6 +18,11 @@ const Login = () => {
     loginUser(email, password)
       .then(result => {
         console.log(result.user);
+        toast('🦄 Login successfully!', {
+          autoClose: 3000,
+          theme: "dark",
+        })
+        navigate("/")
       })
       .catch(error => {
         console.log(error.message)

@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Register = () => {
   const { createUser } = useContext(AuthContext)
+  const navigate = useNavigate();
 
   const handleRegister = event => {
     event.preventDefault();
@@ -30,8 +32,13 @@ const Register = () => {
           .then(data => {
             console.log(data);
             if (data.insertedId) {
-              alert("User added Database is successfully")
+              toast('🦄 Account created successfully!', {
+                autoClose: 3000,
+                theme: "dark",
+              })
             }
+            navigate("/")
+
           })
 
       })
